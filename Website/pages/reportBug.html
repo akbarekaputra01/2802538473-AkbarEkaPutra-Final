@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palorant - Report a Bug</title>
+    <link rel="icon" href="../assets/images/palorantIcon.png">
+    <link rel="stylesheet" href="../css/reportBug.css">
+    <script src="../js/reportBug.js" defer></script>
+</head>
+
+<body>
+    <!-- Fixed Navbar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="../assets/images/giotIcon.png" alt="Game Logo">
+                <img src="../assets/images/palorantIcon.png" alt="Game Logo">
+            </div>
+
+            <button class="hamburger" id="hamburger">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">HOME</a>
+                <a href="./agents.html" class="active">AGENTS</a>
+                <a href="./maps.html">MAPS</a>
+                <a href="./news.html">NEWS</a>
+                <a href="./reportBug.html">REPORT BUG</a>
+                <a href="https://playvalorant.com/id-id/download/" target="_blank" rel="noopener noreferrer" class="play-now">PLAY NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Report a Bug</h1>
+
+        <form id="bugReportForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Your in-game username">
+                <div class="error-message" id="username-error">Username is required (min 3 characters)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Your email address">
+                <div class="error-message" id="email-error">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="server">Server Region</label>
+                <select id="server" name="server">
+                    <option value="" selected disabled>Select your server</option>
+                    <option value="NA West">NA West</option>
+                    <option value="NA East">NA East</option>
+                    <option value="EU West">EU West</option>
+                    <option value="EU East">EU East</option>
+                    <option value="Asia North">Asia North</option>
+                    <option value="Asia South">Asia South</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="South America">South America</option>
+                    <option value="Middle East">Middle East</option>
+                    <option value="Africa">Africa</option>
+                </select>
+                <div class="error-message" id="server-error">Please select your server region</div>
+            </div>
+
+            <div class="form-group">
+                <label for="bugDescription">Bug Description</label>
+                <textarea id="bugDescription" name="bugDescription" placeholder="Please describe the bug in detail. Include steps to reproduce, what you expected to happen, and what actually happened."></textarea>
+                <div class="error-message" id="description-error">Please provide a detailed description (min 20 characters)</div>
+            </div>
+
+            <div class="form-group">
+                <label>Attachments (Screenshots/Videos)</label>
+                <div class="file-input-container">
+                    <label for="attachment" class="file-input-label">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                        </svg>
+                        <span class="file-input-text">Choose files or drag here (max 5 files)</span>
+                    </label>
+                    <input type="file" id="attachment" name="attachments[]" accept="image/*,video/*" multiple class="file-input">
+                </div>
+                <div class="file-list" id="file-list"></div>
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">0%</div>
+                </div>
+                <div class="error-message" id="file-error">Please provide valid files (max 5MB each, max 5 files)</div>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="followup" name="followup">
+                <label for="followup">I give permission to contact me for follow-up information about this bug report (Optional)</label>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submit-btn">Submit Report</button>
+        </form>
+    </div>
+
+    <!-- Success Popup -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">✓</div>
+            <h2 class="popup-title">Report Submitted!</h2>
+            <p class="popup-message">Thank you for helping improve Palorant. Our team will review your bug report shortly.</p>
+            <button class="popup-close" id="popup-close">Close</button>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <section class="footer-section">
+        <a href="https://playvalorant.com/id-id/download/" target="_blank" rel="noopener noreferrer" class="download-now-button">
+            <div class="download-now">Download Palorant</div>
+        </a>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img class="footer-logo" src="../assets/images/GiotGamesLogo.png" alt="Giot Game Logo">
+                <p class="footer-copyright">© 2020-2025 Giot Games, Inc. All trademarks and logos are property of Rabka Games, Inc.</p>
+            </div>
+            <div class="footer-center">
+                <h2 class="footer-heading">Stay Connected</h2>
+                <div class="social-icons">
+                    <a href="https://twitter.com/VALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Twitter.png" alt="Twitter"></a>
+                    <a href="https://www.youtube.com/@valorant" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Youtube.png" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/valorant/" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@valorant?lang=en" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Tiktok.png" alt="TikTok"></a>
+                    <a href="https://www.facebook.com/VALORANTid/" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Facebook.png" alt="Facebook"></a>
+                    <a href="https://discord.com/invite/valorant" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Discord.png" alt="Discord"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="https://www.riotgames.com/en/privacy-notice" target="_blank" rel="noopener noreferrer" class="footer-link">Privacy Notice</a></li>
+                    <li><a href="https://www.riotgames.com/en/terms-of-service" target="_blank" rel="noopener noreferrer" class="footer-link">Terms of Service</a></li>
+                    <li><a href="https://www.riotgames.com/en/cookie-policy" target="_blank" rel="noopener noreferrer" class="footer-link">Cookie Preferences</a></li>
+                </ul>
+                <img class="esrb-rating" src="../assets/images/tenESRB.png" alt="ESRB Rating">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

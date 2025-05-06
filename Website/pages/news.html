@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palorant - News</title>
+    <link rel="icon" href="../assets/images/palorantIcon.png">
+    <link rel="stylesheet" href="../css/news.css">
+    <script src="../js/news.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="../assets/images/giotIcon.png" alt="Game Logo">
+                <img src="../assets/images/palorantIcon.png" alt="Game Logo">
+            </div>
+
+            <button class="hamburger" id="hamburger">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">HOME</a>
+                <a href="./agents.html" class="active">AGENTS</a>
+                <a href="./maps.html">MAPS</a>
+                <a href="./news.html">NEWS</a>
+                <a href="./reportBug.html">REPORT BUG</a>
+                <a href="https://playvalorant.com/id-id/download/" target="_blank" rel="noopener noreferrer" class="play-now">PLAY NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Content -->
+    <div class="news-container">
+        <header class="news-header">
+            <div class="news-logo">NEWS</div>
+            <h1 class="news-title">Latest News & Updates</h1>
+            <p class="news-subtitle">Stay informed about new features, events, and game announcements</p>
+        </header>
+
+        <!-- News Filters -->
+        <div class="news-filters">
+            <button class="filter-btn active" data-filter="all">All News</button>
+            <button class="filter-btn" data-filter="update">Updates</button>
+            <button class="filter-btn" data-filter="patch">Patches</button>
+            <button class="filter-btn" data-filter="esports">Esports</button>
+            <button class="filter-btn" data-filter="community">Community</button>
+            <button class="filter-btn" data-filter="developer">Developer</button>
+        </div>
+
+        <main class="news-main">
+            <div class="news-grid" id="news-grid">
+                <!-- Featured News -->
+                <article class="news-card featured-news" data-category="update">
+                    <div class="image-container">
+                        <img class="news-image" src="../assets/images/news/neon-district.jpeg" alt="Neon District Map">
+                    </div>
+                    <div class="featured-content">
+                        <div class="news-meta">
+                            <span class="news-category">UPDATE</span>
+                            <span class="news-date">June 15, 2025</span>
+                        </div>
+                        <h2 class="news-headline">New Map: Neon District Coming Next Season</h2>
+                        <p class="news-excerpt">Experience our most innovative map yet - a futuristic cityscape with dynamic lighting, vertical gameplay, and interactive elements that will transform your strategies. Launching July 1st with Season 4.</p>
+                        <a href="./newsDetails/news1.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Regular News Cards -->
+                <article class="news-card" data-category="patch">
+                    <div class="image-container">
+                        <img class="news-image" src="../assets/images/news/patch-notes.png" alt="Patch Notes">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">PATCH</span>
+                            <span class="news-date">June 10, 2023</span>
+                        </div>
+                        <h2 class="news-headline">Game Balance Updates</h2>
+                        <p class="news-excerpt">Major adjustments to Phantom rifle and Sage's abilities in this week's update. See full patch notes for all changes.</p>
+                        <a href="./newsDetails/news2.html" class="read-more">Details</a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="esports">
+                    <div class="image-container">
+                        <img class="news-image" src="../assets/images/news/Champions-Tour-Announment.jpg" alt="Esports">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">ESPORTS</span>
+                            <span class="news-date">June 8, 2023</span>
+                        </div>
+                        <h2 class="news-headline">Champions Tour Announced</h2>
+                        <p class="news-excerpt">$2M global competitive circuit begins next month. Qualifiers start July 15th.</p>
+                        <a href="./newsDetails/news3.html" class="read-more">Learn More</a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="community">
+                    <div class="image-container">
+                        <img class="news-image" src="../assets/images/news/fan-art.jpg" alt="Community">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">COMMUNITY</span>
+                            <span class="news-date">June 1, 2023</span>
+                        </div>
+                        <h2 class="news-headline">Fan Art Winners</h2>
+                        <p class="news-excerpt">May's best community creations featured. Winning designs become in-game sprays.</p>
+                        <a href="./newsDetails/news5.html" class="read-more">See Art</a>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="developer">
+                    <div class="image-container">
+                        <img class="news-image" src="../assets/images/news/Sound-Design-Insights.jpg" alt="Developer">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category">DEVELOPER</span>
+                            <span class="news-date">May 28, 2023</span>
+                        </div>
+                        <h2 class="news-headline">Sound Design Insights</h2>
+                        <p class="news-excerpt">How we create Palorant's immersive audio experience. Behind-the-scenes look.</p>
+                        <a href="./newsDetails/news4.html" class="read-more">Read</a>
+                    </div>
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer-section">
+        <a href="https://playvalorant.com/id-id/download/" target="_blank" rel="noopener noreferrer" class="download-now-button">
+            <div class="download-now">Download Palorant</div>
+        </a>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img class="footer-logo" src="../assets/images/GiotGamesLogo.png" alt="Giot Game Logo">
+                <p class="footer-copyright">© 2020-2025 Giot Games, Inc. All trademarks and logos are property of Rabka Games, Inc.</p>
+            </div>
+            <div class="footer-center">
+                <h2 class="footer-heading">Stay Connected</h2>
+                <div class="social-icons">
+                    <a href="https://twitter.com/VALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Twitter.png" alt="Twitter"></a>
+                    <a href="https://www.youtube.com/@valorant" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Youtube.png" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/valorant/" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@valorant?lang=en" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Tiktok.png" alt="TikTok"></a>
+                    <a href="https://www.facebook.com/VALORANTid/" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Facebook.png" alt="Facebook"></a>
+                    <a href="https://discord.com/invite/valorant" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Discord.png" alt="Discord"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="https://www.riotgames.com/en/privacy-notice" target="_blank" rel="noopener noreferrer" class="footer-link">Privacy Notice</a></li>
+                    <li><a href="https://www.riotgames.com/en/terms-of-service" target="_blank" rel="noopener noreferrer" class="footer-link">Terms of Service</a></li>
+                    <li><a href="https://www.riotgames.com/en/cookie-policy" target="_blank" rel="noopener noreferrer" class="footer-link">Cookie Preferences</a></li>
+                </ul>
+                <img class="esrb-rating" src="../assets/images/tenESRB.png" alt="ESRB Rating">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

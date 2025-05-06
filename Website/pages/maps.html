@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palorant - Maps</title>
+    <link rel="icon" href="../assets/images/palorantIcon.png">
+    <link rel="stylesheet" href="../css/maps.css">
+    <script src="../js/maps.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="../assets/images/giotIcon.png" alt="Game Logo">
+                <img src="../assets/images/palorantIcon.png" alt="Game Logo">
+            </div>
+
+            <button class="hamburger" id="hamburger">☰</button>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html">HOME</a>
+                <a href="./agents.html" class="active">AGENTS</a>
+                <a href="./maps.html">MAPS</a>
+                <a href="./news.html">NEWS</a>
+                <a href="./reportBug.html">REPORT BUG</a>
+                <a href="https://playvalorant.com/id-id/download/" target="_blank" rel="noopener noreferrer" class="play-now">PLAY NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="title-header">
+            <h1 class="title-header-h1">MAPS</h1>
+        </header>
+    </div>
+
+    <section class="maps-container">
+        <!-- Map 1: Fracture -->
+        <div class="map-card">
+            <div class="map-header">
+                <h2 class="map-name">Fracture</h2>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel" id="fracture-carousel">
+                    <img class="carousel-image" src="../assets/images/maps/fracture-1.png" alt="Fracture Map Overview">
+                    <img class="carousel-image" src="../assets/images/maps/fracture-2.png" alt="Fracture Site A">
+                    <img class="carousel-image" src="../assets/images/maps/fracture-3.png" alt="Fracture Site B">
+                    <img class="carousel-image" src="../assets/images/maps/fracture-4.png" alt="Fracture Mid Area">
+                    <img class="carousel-image" src="../assets/images/maps/fracture-5.png" alt="Fracture 5">
+                </div>
+                <button class="carousel-btn carousel-prev" onclick="moveSlide('fracture', -1)">&#10094;</button>
+                <button class="carousel-btn carousel-next" onclick="moveSlide('fracture', 1)">&#10095;</button>
+                <div class="carousel-indicators" id="fracture-indicators">
+                    <span class="carousel-indicator active" onclick="goToSlide('fracture', 0)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('fracture', 1)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('fracture', 2)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('fracture', 3)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('fracture', 4)"></span>
+                </div>
+            </div>
+            <div class="map-description">
+                <p class="map-description-text">Fracture is set in a secret research facility that suffered a catastrophic dimensional rift, blending high-tech labs with unstable void energy. The map's H-shape forces defenders to split resources while attackers can exploit the central
+                    zipline.
+                </p>
+
+                <div class="environment-features">
+                    <h3 class="environment-title">Unique Environmental Aspects:</h3>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Dimensional Rift: The central area crackles with unstable energy, creating visual disturbances</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Research Equipment: Broken containment units and monitoring devices provide partial cover</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Zipline Mechanics: The central zipline makes distinct sounds when used, alerting nearby players</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Glowing Fractures: Pulsing energy lines on walls reveal approaching enemies' silhouettes briefly</span>
+                    </div>
+                </div>
+
+                <div class="strategic-points">
+                    <h3 class="strategic-title">Strategic Points:</h3>
+                    <ul class="strategic-list">
+                        <li class="strategic-item">Dish: High ground with sightlines to both sites</li>
+                        <li class="strategic-item">Tower: Strong defensive position with cover</li>
+                        <li class="strategic-item">Arcade: Close-quarters combat area with multiple angles</li>
+                        <li class="strategic-item">Generator: Central control point with zipline access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map 2: Ascent -->
+        <div class="map-card">
+            <div class="map-header">
+                <h2 class="map-name">Ascent</h2>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel" id="ascent-carousel">
+                    <img class="carousel-image" src="../assets/images/maps/ascent-1.png" alt="Ascent Map Overview">
+                    <img class="carousel-image" src="../assets/images/maps/ascent-2.png" alt="Ascent Site A">
+                    <img class="carousel-image" src="../assets/images/maps/ascent-3.png" alt="Ascent Site B">
+                    <img class="carousel-image" src="../assets/images/maps/ascent-4.png" alt="Ascent Site 4">
+                    <img class="carousel-image" src="../assets/images/maps/ascent-5.png" alt="Ascent Site 5">
+                </div>
+                <button class="carousel-btn carousel-prev" onclick="moveSlide('ascent', -1)">&#10094;</button>
+                <button class="carousel-btn carousel-next" onclick="moveSlide('ascent', 1)">&#10095;</button>
+                <div class="carousel-indicators" id="ascent-indicators">
+                    <span class="carousel-indicator active" onclick="goToSlide('ascent', 0)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('ascent', 1)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('ascent', 2)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('ascent', 3)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('ascent', 4)"></span>
+                </div>
+            </div>
+            <div class="map-description">
+                <p class="map-description-text">Set in a floating Venetian neighborhood, Ascent features destructible walls and beautiful but deadly open spaces. The map's mid-courtyard offers sniper sightlines while the side alleys provide close-quarters combat opportunities.</p>
+
+                <div class="environment-features">
+                    <h3 class="environment-title">Unique Environmental Aspects:</h3>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Destructible Doors: Wooden doors can be permanently destroyed with gunfire, changing map flow</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Floating Islands: The entire map drifts on anti-gravity platforms, creating vertigo-inducing drops</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Clock Tower: The functioning clock provides audible time cues for rotations</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Reflective Water: Puddles in courtyards reflect movement above, revealing enemy positions</span>
+                    </div>
+                </div>
+
+                <div class="strategic-points">
+                    <h3 class="strategic-title">Strategic Points:</h3>
+                    <ul class="strategic-list">
+                        <li class="strategic-item">Mid Courtyard: Central area with multiple angles</li>
+                        <li class="strategic-item">Catwalk: High ground overlooking Site A</li>
+                        <li class="strategic-item">B Main: Main choke point for Site B</li>
+                        <li class="strategic-item">Tree: Cover-rich area with rotation options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map 3: Bind -->
+        <div class="map-card">
+            <div class="map-header">
+                <h2 class="map-name">Bind</h2>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel" id="bind-carousel">
+                    <img class="carousel-image" src="../assets/images/maps/bind-1.png" alt="Bind Map Overview">
+                    <img class="carousel-image" src="../assets/images/maps/bind-2.png" alt="Bind Site A">
+                    <img class="carousel-image" src="../assets/images/maps/bind-3.png" alt="Bind Site B">
+                    <img class="carousel-image" src="../assets/images/maps/bind-4.png" alt="Bind 4">
+                    <img class="carousel-image" src="../assets/images/maps/bind-5.png" alt="Bind 5">
+                    <img class="carousel-image" src="rters" alt="Bind Teleporters">
+                </div>
+                <button class="carousel-btn carousel-prev" onclick="moveSlide('bind', -1)">&#10094;</button>
+                <button class="carousel-btn carousel-next" onclick="moveSlide('bind', 1)">&#10095;</button>
+                <div class="carousel-indicators" id="bind-indicators">
+                    <span class="carousel-indicator active" onclick="goToSlide('bind', 0)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('bind', 1)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('bind', 2)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('bind', 3)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('bind', 4)"></span>
+                </div>
+            </div>
+            <div class="map-description">
+                <p class="map-description-text">Located in a Moroccan coastal town, Bind's teleporters create instant rotation opportunities. The map's tight corridors and sandy terrain affect footstep sounds, while the ocean backdrop provides stunning but distracting views.</p>
+
+                <div class="environment-features">
+                    <h3 class="environment-title">Unique Environmental Aspects:</h3>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Dimensional Teleporters: Instant but noisy rotation between sites with distinct activation sounds</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Sand Physics: Footsteps sound different on various surfaces (tile vs. sand vs. metal)</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Market Stalls: Breakable wooden stalls can be used for temporary cover</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Ocean Effects: Waves crashing provide audio cover for certain movements</span>
+                    </div>
+                </div>
+
+                <div class="strategic-points">
+                    <h3 class="strategic-title">Strategic Points:</h3>
+                    <ul class="strategic-list">
+                        <li class="strategic-item">Hookah: Close-quarters area leading to Site B</li>
+                        <li class="strategic-item">Bath: Open area with teleporter access</li>
+                        <li class="strategic-item">U-Hall: Long sightline to Site A</li>
+                        <li class="strategic-item">Short A: Quick access to Site A</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map 4: Icebox -->
+        <div class="map-card">
+            <div class="map-header">
+                <h2 class="map-name">Icebox</h2>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel" id="icebox-carousel">
+                    <img class="carousel-image" src="../assets/images/maps/icebox-1.png" alt="Icebox Map Overview">
+                    <img class="carousel-image" src="../assets/images/maps/icebox-2.png" alt="Icebox Site A">
+                    <img class="carousel-image" src="../assets/images/maps/icebox-3.png" alt="Icebox Site B">
+                    <img class="carousel-image" src="../assets/images/maps/icebox-4.png" alt="Icebox 4">
+                    <img class="carousel-image" src="../assets/images/maps/icebox-5.png" alt="Icebox 5">
+                </div>
+                <button class="carousel-btn carousel-prev" onclick="moveSlide('icebox', -1)">&#10094;</button>
+                <button class="carousel-btn carousel-next" onclick="moveSlide('icebox', 1)">&#10095;</button>
+                <div class="carousel-indicators" id="icebox-indicators">
+                    <span class="carousel-indicator active" onclick="goToSlide('icebox', 0)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('icebox', 1)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('icebox', 2)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('icebox', 3)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('icebox', 4)"></span>
+                </div>
+            </div>
+            <div class="map-description">
+                <p class="map-description-text">This abandoned Arctic research station features extreme verticality with cargo containers and metal walkways. The freezing environment affects visibility with breath vapor, while the unstable ice creates dangerous sightlines.</p>
+
+                <div class="environment-features">
+                    <h3 class="environment-title">Unique Environmental Aspects:</h3>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Snow Dynamics: Footprints remain briefly in fresh snow, revealing recent movement</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Ice Physics: Slippery surfaces affect movement speed and stopping distance</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Cargo Ziplines: Multiple ziplines allow quick vertical movement but leave riders vulnerable</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Frozen Machinery: Large ice formations can be shattered to create new sightlines</span>
+                    </div>
+                </div>
+
+                <div class="strategic-points">
+                    <h3 class="strategic-title">Strategic Points:</h3>
+                    <ul class="strategic-list">
+                        <li class="strategic-item">Tube: Central area with zipline access</li>
+                        <li class="strategic-item">Belt: High ground overlooking Site B</li>
+                        <li class="strategic-item">Nest: Sniper perch with wide view</li>
+                        <li class="strategic-item">Kitchen: Close-quarters area near Site A</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map 5: Breeze -->
+        <div class="map-card">
+            <div class="map-header">
+                <h2 class="map-name">Breeze</h2>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel" id="breeze-carousel">
+                    <img class="carousel-image" src="../assets/images/maps/breeze-1.png" alt="Breeze Map Overview">
+                    <img class="carousel-image" src="../assets/images/maps/breeze-2.png" alt="Breeze Site A">
+                    <img class="carousel-image" src="../assets/images/maps/breeze-3.png" alt="Breeze Site B">
+                    <img class="carousel-image" src="../assets/images/maps/breeze-4.png" alt="Breeze Mid Area">
+                    <img class="carousel-image" src="../assets/images/maps/breeze-5.png" alt="Breeze 5">
+                </div>
+                <button class="carousel-btn carousel-prev" onclick="moveSlide('breeze', -1)">&#10094;</button>
+                <button class="carousel-btn carousel-next" onclick="moveSlide('breeze', 1)">&#10095;</button>
+                <div class="carousel-indicators" id="breeze-indicators">
+                    <span class="carousel-indicator active" onclick="goToSlide('breeze', 0)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('breeze', 1)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('breeze', 2)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('breeze', 3)"></span>
+                    <span class="carousel-indicator" onclick="goToSlide('breeze', 4)"></span>
+                </div>
+            </div>
+            <div class="map-description">
+                <p class="map-description-text">This tropical island paradise hides dangerous sightlines among its ruins and caves. The constant ocean breeze affects projectile trajectories slightly, while the ancient stone structures provide unique angles.</p>
+
+                <div class="environment-features">
+                    <h3 class="environment-title">Unique Environmental Aspects:</h3>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Wind Effects: Subtle projectile drift that changes direction periodically</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Ancient Mechanisms: Movable stone doors can create new pathways when activated</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Tropical Wildlife: Birds scatter when players approach, potentially revealing positions</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">◆</span>
+                        <span>Ruined Architecture: Collapsed walls create unexpected peek angles and jump spots</span>
+                    </div>
+                </div>
+
+                <div class="strategic-points">
+                    <h3 class="strategic-title">Strategic Points:</h3>
+                    <ul class="strategic-list">
+                        <li class="strategic-item">Pyramid: Central high ground with rotation options</li>
+                        <li class="strategic-item">Cave: Protected route to Site B</li>
+                        <li class="strategic-item">Arches: Long sightline to Site A</li>
+                        <li class="strategic-item">Mid Wood Doors: Choke point between sites</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-section">
+        <a href="https://playvalorant.com/id-id/download/" target="_blank" rel="noopener noreferrer" class="download-now-button">
+            <div class="download-now">Download Palorant</div>
+        </a>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img class="footer-logo" src="../assets/images/GiotGamesLogo.png" alt="Giot Game Logo">
+                <p class="footer-copyright">© 2020-2025 Giot Games, Inc. All trademarks and logos are property of Rabka Games, Inc.</p>
+            </div>
+            <div class="footer-center">
+                <h2 class="footer-heading">Stay Connected</h2>
+                <div class="social-icons">
+                    <a href="https://twitter.com/VALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Twitter.png" alt="Twitter"></a>
+                    <a href="https://www.youtube.com/@valorant" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Youtube.png" alt="YouTube"></a>
+                    <a href="https://www.instagram.com/valorant/" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.tiktok.com/@valorant?lang=en" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Tiktok.png" alt="TikTok"></a>
+                    <a href="https://www.facebook.com/VALORANTid/" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Facebook.png" alt="Facebook"></a>
+                    <a href="https://discord.com/invite/valorant" target="_blank" rel="noopener noreferrer" class="social-icon"><img src="../assets/images/Discord.png" alt="Discord"></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a href="https://www.riotgames.com/en/privacy-notice" target="_blank" rel="noopener noreferrer" class="footer-link">Privacy Notice</a></li>
+                    <li><a href="https://www.riotgames.com/en/terms-of-service" target="_blank" rel="noopener noreferrer" class="footer-link">Terms of Service</a></li>
+                    <li><a href="https://www.riotgames.com/en/cookie-policy" target="_blank" rel="noopener noreferrer" class="footer-link">Cookie Preferences</a></li>
+                </ul>
+                <img class="esrb-rating" src="../assets/images/tenESRB.png" alt="ESRB Rating">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
